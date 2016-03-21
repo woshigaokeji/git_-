@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"haha");
     UIView *view = [[UIView alloc] init];
+    [self.view addSubview:view];
+    NSLog(@"这是一个新的分支!");
 }
 
 - (void)didReceiveMemoryWarning {
