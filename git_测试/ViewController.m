@@ -23,6 +23,7 @@
     NSLog(@"我添加了一个新的分支!");
     UIButton *btn;
     NSLog(@"11111");
+    btn = [UIButton buttonWithType:UIButtonTypeCustom];
 }
 
 - (void)didReceiveMemoryWarning {
