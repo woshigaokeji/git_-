@@ -24,6 +24,7 @@
     UIButton *btn;
     NSLog(@"11111");
     btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIView *view1 = [[UIView alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
