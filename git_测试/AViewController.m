@@ -8,14 +8,17 @@
 
 #import "AViewController.h"
 #import "ACollectionViewCell.h"
+#import "KJScrollView.h"
 #define fDeviceWidth ([UIScreen mainScreen].bounds.size.width)
 #define fDeviceHeight ([UIScreen mainScreen].bounds.size.height-StatusBarHeight)
+
 @interface AViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UIView *_headView;
     NSMutableArray *dataource; //*<数据源*/
     NSMutableArray *imageDataSource; //*<图片数据源*/
 }
+@property(nonatomic,strong)KJScrollView *ScrollView;
 @property(nonatomic,strong)UICollectionView *collectionView;
 @end
 
@@ -25,7 +28,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"今日回访";
+    [self ScrollView];
     [self collectionView];
+    
+}
+
+- (KJScrollView *)ScrollView {
+    if (nil == _ScrollView) {
+        NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"guid1_375",@"test",@"guid4_375",@"guid2_375", nil];
+        _ScrollView = [[KJScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 160) ImageArr:arr];
+    }
+    return _ScrollView;
 }
 
 - (UICollectionView *)collectionView {
@@ -66,11 +79,12 @@
 #pragma mark --UIcolletionViewDelegate&dataSource--
 //定义展示的UIcolletionViewCell的个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
     return dataource.count;
 }
 //定义展示的Section的个数
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 //每个UIcolletionView展示的内容
 -(ACollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,11 +100,25 @@
 }
 //头部显示的内容
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    
     UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:
                                             UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableView" forIndexPath:indexPath];
+    switch (indexPath.section) {
+        case 0:
+        {
+            [headerView addSubview:_headView];//头部广告栏
+            break;
+        }
+        case 1:
+        {
+            [headerView addSubview:_ScrollView];
+        }
+            
+        default:
+            break;
+    }
     
-    [headerView addSubview:_headView];//头部广告栏
+    
+    
     return headerView;
     
 }

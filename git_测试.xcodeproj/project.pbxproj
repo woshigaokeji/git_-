@@ -41,6 +41,7 @@
 		AAC85A831C9FEAA0009AC584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC85A811C9FEAA0009AC584 /* LaunchScreen.storyboard */; };
 		AAFCA7891CBF7B9F00F3F8BE /* ACollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFCA7881CBF7B9F00F3F8BE /* ACollectionViewCell.m */; };
 		AAFCA78B1CBF871900F3F8BE /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFCA78A1CBF871900F3F8BE /* BViewController.xib */; };
+		AAFCA7AF1CBFA19D00F3F8BE /* KJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFCA7AE1CBFA19D00F3F8BE /* KJScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,8 @@
 		AAFCA7871CBF7B9F00F3F8BE /* ACollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACollectionViewCell.h; sourceTree = "<group>"; };
 		AAFCA7881CBF7B9F00F3F8BE /* ACollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACollectionViewCell.m; sourceTree = "<group>"; };
 		AAFCA78A1CBF871900F3F8BE /* BViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
+		AAFCA7AD1CBFA19D00F3F8BE /* KJScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJScrollView.h; sourceTree = "<group>"; };
+		AAFCA7AE1CBFA19D00F3F8BE /* KJScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,7 @@
 			children = (
 				AA572CC71CBE4A73003DEB92 /* AFNetworking */,
 				AA1909D41CAE7FF9009B5DD9 /* SVProgressHUD */,
+				AAFCA7AC1CBFA16B00F3F8BE /* View */,
 				AAC85A761C9FEAA0009AC584 /* AppDelegate.h */,
 				AAC85A771C9FEAA0009AC584 /* AppDelegate.m */,
 				AAC85A791C9FEAA0009AC584 /* ViewController.h */,
@@ -259,6 +263,16 @@
 				AAC85A741C9FEAA0009AC584 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAFCA7AC1CBFA16B00F3F8BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAFCA7AD1CBFA19D00F3F8BE /* KJScrollView.h */,
+				AAFCA7AE1CBFA19D00F3F8BE /* KJScrollView.m */,
+			);
+			name = View;
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +375,7 @@
 				AA572CC61CBE426C003DEB92 /* MainTabBarController.m in Sources */,
 				AA1909DD1CAE7FF9009B5DD9 /* SVIndefiniteAnimatedView.m in Sources */,
 				AA572CEF1CBE4A74003DEB92 /* AFSecurityPolicy.m in Sources */,
+				AAFCA7AF1CBFA19D00F3F8BE /* KJScrollView.m in Sources */,
 				AA572CF21CBE4A74003DEB92 /* AFURLSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
