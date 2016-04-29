@@ -127,12 +127,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA1909D31CAE7568009B5DD9 /* New Group */ = {
+		AA1909D31CAE7568009B5DD9 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				AA1909FF1CAE8277009B5DD9 /* singleton.h */,
 			);
-			name = "New Group";
+			name = model;
 			sourceTree = "<group>";
 		};
 		AA1909D41CAE7FF9009B5DD9 /* SVProgressHUD */ = {
@@ -247,7 +247,7 @@
 				AA572D041CBE4EE4003DEB92 /* BViewController.h */,
 				AA572D051CBE4EE4003DEB92 /* BViewController.m */,
 				AAFCA78A1CBF871900F3F8BE /* BViewController.xib */,
-				AA1909D31CAE7568009B5DD9 /* New Group */,
+				AA1909D31CAE7568009B5DD9 /* model */,
 				AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */,
 				AAC85A7F1C9FEAA0009AC584 /* Assets.xcassets */,
 				AAC85A811C9FEAA0009AC584 /* LaunchScreen.storyboard */,
