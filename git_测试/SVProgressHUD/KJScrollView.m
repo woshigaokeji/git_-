@@ -67,7 +67,9 @@
     //注意此方法可以根据页数返回UIPageControl合适的大小
     CGSize size = [self.pageControl sizeForNumberOfPages:self.imageCount];
     self.pageControl.bounds = CGRectMake(0, 0, size.width, size.height - 20);
-    self.pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
+    //设置默认颜色,选中为白色
+//    self.pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
+    //默认颜色是白色,选中颜色设置
     self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     self.pageControl.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) - 20);
     //设置总页数

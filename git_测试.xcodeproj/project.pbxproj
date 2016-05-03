@@ -34,6 +34,9 @@
 		AA572D001CBE4BFE003DEB92 /* MyTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572CFF1CBE4BFE003DEB92 /* MyTabBarBtn.m */; };
 		AA572D031CBE4ED8003DEB92 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D021CBE4ED8003DEB92 /* AViewController.m */; };
 		AA572D061CBE4EE4003DEB92 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D051CBE4EE4003DEB92 /* BViewController.m */; };
+		AA8380C21CD30BC800FB52A9 /* BTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */; };
+		AA8380C81CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */; };
 		AAC85A751C9FEAA0009AC584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A741C9FEAA0009AC584 /* main.m */; };
 		AAC85A781C9FEAA0009AC584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A771C9FEAA0009AC584 /* AppDelegate.m */; };
 		AAC85A7E1C9FEAA0009AC584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */; };
@@ -100,6 +103,12 @@
 		AA572D021CBE4ED8003DEB92 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 		AA572D041CBE4EE4003DEB92 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		AA572D051CBE4EE4003DEB92 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		AA8380C01CD30BC800FB52A9 /* BTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTableViewCell.h; sourceTree = "<group>"; };
+		AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTableViewCell.m; sourceTree = "<group>"; };
+		AA8380C41CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		AA8380C61CD30C6E00FB52A9 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		AAC85A701C9FEAA0009AC584 /* git_测试.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git_测试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC85A741C9FEAA0009AC584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAC85A761C9FEAA0009AC584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -208,6 +217,17 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		AA8380C31CD30C6E00FB52A9 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AA8380C41CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.h */,
+				AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */,
+				AA8380C61CD30C6E00FB52A9 /* UIView+SDAutoLayout.h */,
+				AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
 		AAC85A671C9FEAA0009AC584 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +247,7 @@
 		AAC85A721C9FEAA0009AC584 /* git_测试 */ = {
 			isa = PBXGroup;
 			children = (
+				AA8380C31CD30C6E00FB52A9 /* SDAutoLayout */,
 				AA572CC71CBE4A73003DEB92 /* AFNetworking */,
 				AA1909D41CAE7FF9009B5DD9 /* SVProgressHUD */,
 				AAFCA7AC1CBFA16B00F3F8BE /* View */,
@@ -246,6 +267,8 @@
 				AAFCA7881CBF7B9F00F3F8BE /* ACollectionViewCell.m */,
 				AA572D041CBE4EE4003DEB92 /* BViewController.h */,
 				AA572D051CBE4EE4003DEB92 /* BViewController.m */,
+				AA8380C01CD30BC800FB52A9 /* BTableViewCell.h */,
+				AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */,
 				AAFCA78A1CBF871900F3F8BE /* BViewController.xib */,
 				AA1909D31CAE7568009B5DD9 /* model */,
 				AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */,
@@ -350,6 +373,7 @@
 			files = (
 				AA572CC31CBE4228003DEB92 /* MainTableViewController.m in Sources */,
 				AA572CFA1CBE4A74003DEB92 /* UIImageView+AFNetworking.m in Sources */,
+				AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */,
 				AA572CFC1CBE4A74003DEB92 /* UIRefreshControl+AFNetworking.m in Sources */,
 				AA1909D21CAE6414009B5DD9 /* ViewController.m in Sources */,
 				AA1909E01CAE7FF9009B5DD9 /* SVRadialGradientLayer.m in Sources */,
@@ -358,12 +382,14 @@
 				AA572CED1CBE4A74003DEB92 /* AFHTTPSessionManager.m in Sources */,
 				AA572CF11CBE4A74003DEB92 /* AFURLResponseSerialization.m in Sources */,
 				AA572CF81CBE4A74003DEB92 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				AA8380C81CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				AA572CF51CBE4A74003DEB92 /* AFAutoPurgingImageCache.m in Sources */,
 				AA572CF71CBE4A74003DEB92 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				AA572CFB1CBE4A74003DEB92 /* UIProgressView+AFNetworking.m in Sources */,
 				AA572CF41CBE4A74003DEB92 /* README.md in Sources */,
 				AA572CF91CBE4A74003DEB92 /* UIButton+AFNetworking.m in Sources */,
 				AA572CEE1CBE4A74003DEB92 /* AFNetworkReachabilityManager.m in Sources */,
+				AA8380C21CD30BC800FB52A9 /* BTableViewCell.m in Sources */,
 				AAFCA7891CBF7B9F00F3F8BE /* ACollectionViewCell.m in Sources */,
 				AAC85A781C9FEAA0009AC584 /* AppDelegate.m in Sources */,
 				AA1909DF1CAE7FF9009B5DD9 /* SVProgressHUD.m in Sources */,
