@@ -24,6 +24,7 @@
 //        self.alpha = 0.7;
         _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 0)];
         _bgView.backgroundColor = [UIColor whiteColor];
+        _bgView.hidden = YES;
         _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-CGRectGetMaxY(_bgView.frame))];
         _blankView.backgroundColor = [UIColor lightGrayColor];
         _blankView.alpha = 0.5;
@@ -83,12 +84,14 @@
         _blankView.frame = CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-CGRectGetMaxY(_bgView.frame));
         _bgView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 160);
         _blankView.alpha = 0.4f;
+        _bgView.hidden = NO;
     } completion:^(BOOL finished) {
         
     }];
 }
 - (void)hidView {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        _bgView.hidden = YES;
         _blankView.frame = CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), 0);
         _blankView.alpha = 0.0f;
         _bgView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 0);
