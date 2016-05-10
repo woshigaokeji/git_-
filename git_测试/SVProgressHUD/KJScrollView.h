@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface KJScrollView : UIView
-
+/**
+ *  初始化方法
+ *
+ *  @param frame    view的frame
+ *  @param imageArr 循环播放图片的数组
+ *
+ *  @return 返回实例对象
+ */
 - (id)initWithFrame:(CGRect)frame ImageArr:(NSMutableArray *)imageArr;
 
 @end
