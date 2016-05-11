@@ -6,13 +6,23 @@
 //  Copyright © 2016年 马红涛. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
+
+#import <UIKit/UIKit.h>
+@protocol SelectBtnDelegate <NSObject>
+/**
+ *  选中按钮按确定选项的回调
+ *
+ *  @param Section 哪一层
+ *  @param row     哪一个按钮
+ */
+- (void)selectBtn:(NSMutableArray *)SelectRow;
+
+@end
 @interface KJMenuView : UIView
 
-
-
-
+@property(nonatomic,assign)id <SelectBtnDelegate> delegate;   // **< 代理 */
+@property(nonatomic,assign)BOOL hidden;    // **< 判断视图显示或者隐藏 */
 /**
  *  初始化方法
  *
@@ -26,7 +36,14 @@
            TitleArr:(NSArray *)titleArr
             TextArr:(NSArray *)textArr
          titleCount:(NSInteger)count;
-
+/**
+ *  视图显示
+ */
 - (void)showView;
+/**
+ *  视图隐藏
+ */
 - (void)hidView;
+
 @end
+

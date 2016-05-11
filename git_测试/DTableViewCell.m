@@ -98,9 +98,9 @@
         
         _View4.sd_layout
         .topEqualToView(_View3)
-        .rightSpaceToView(_View5,0)
+        .rightSpaceToView(_View5,5)
         .heightRatioToView(_View3,1)
-        .leftSpaceToView(_View3,10);
+        .leftSpaceToView(_View3,0);
         
         [_View3 setSingleLineAutoResizeWithMaxWidth:150];
         [_View5 setSingleLineAutoResizeWithMaxWidth:60];

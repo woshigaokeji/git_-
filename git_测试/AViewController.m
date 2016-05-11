@@ -32,7 +32,15 @@
     self.navigationItem.title = @"今日回访";
     [self ScrollView];
     [self collectionView];
+    [self seta:10 b:13];
     
+}
+- (void)seta:(int)a b:(int)b {
+    NSLog(@"a = %d,b = %d",a,b);
+    a = b-a;
+    b = b-a;
+    a = b+a;
+    NSLog(@"a = %d,b = %d",a,b);
 }
 
 - (KJScrollView *)ScrollView {
