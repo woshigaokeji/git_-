@@ -22,7 +22,7 @@
 @interface KJMenuView : UIView
 
 @property(nonatomic,assign)id <SelectBtnDelegate> delegate;   // **< 代理 */
-@property(nonatomic,assign)BOOL hidden;    // **< 判断视图显示或者隐藏 */
+@property(nonatomic,assign)BOOL MenuHidden;    // **< 判断视图显示或者隐藏 */
 /**
  *  初始化方法
  *

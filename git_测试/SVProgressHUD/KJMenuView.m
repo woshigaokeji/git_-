@@ -25,16 +25,17 @@
     CGFloat height = 0;
     if (self) {
         SelectRow = [NSMutableArray array];
-//        self.backgroundColor = [UIColor lightGrayColor];
-//        self.alpha = 0.7;
         _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 0)];
         _bgView.backgroundColor = [UIColor whiteColor];
         //默认子视图的范围根据父视图的显示而显示
         _bgView.clipsToBounds = YES;
-        _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), 0)];
+        
+        
+        _blankView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-CGRectGetMaxY(_bgView.frame))];
         _blankView.backgroundColor = [UIColor lightGrayColor];
-        _blankView.alpha = 0.5;
+        _blankView.alpha = 0.0;
         _blankView.clipsToBounds = YES;
+        _blankView.hidden = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(TapAction:)];
         [_blankView addGestureRecognizer:tap];
         [self addSubview:_blankView];
@@ -93,28 +94,32 @@
         [_bgView addSubview:_SureBtn];
         [self addSubview:_bgView];
         
-        _hidden = YES;
+        _MenuHidden = YES;
     }
     
     return self;
 }
 - (void)showView {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _blankView.frame = CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)-CGRectGetMaxY(_bgView.frame));
-        _blankView.alpha = 0.4f;
+        self.hidden = NO;
+        _blankView.hidden = NO;
+        _blankView.alpha = 0.6f;
         _bgView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 160);
     } completion:^(BOOL finished) {
-        _hidden = NO;
+        _MenuHidden = NO;
+        
     }];
 }
 - (void)hidView {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _blankView.frame = CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), 0);
-        _blankView.alpha = 0.0f;
+//        _blankView.frame = CGRectMake(0, CGRectGetMaxY(_bgView.frame), CGRectGetWidth(self.frame), 0);
+//        _blankView.alpha = 0.0f;
         _bgView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 0);
     } completion:^(BOOL finished) {
         //这里不移除视图
-        _hidden = YES;
+        _MenuHidden = YES;
+        self.hidden = YES;
+        _blankView.hidden = YES;
     }];
     //回收视图的时候回调代理
     if (self.delegate) {
@@ -157,6 +162,7 @@
 - (void)TapAction:(UITapGestureRecognizer *)sender {
     [self hidView];
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

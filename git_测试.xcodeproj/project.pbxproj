@@ -21,6 +21,9 @@
 		AA1909DF1CAE7FF9009B5DD9 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1909DA1CAE7FF9009B5DD9 /* SVProgressHUD.m */; };
 		AA1909E01CAE7FF9009B5DD9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1909DC1CAE7FF9009B5DD9 /* SVRadialGradientLayer.m */; };
 		AA2DB7C91CD9ED7A00BE48F4 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2DB7C81CD9ED7A00BE48F4 /* CViewController.m */; };
+		AA52D16D1CED67C9009474C1 /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52D16C1CED67C9009474C1 /* FriendsListViewController.m */; };
+		AA52D1701CED9BE2009474C1 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52D16F1CED9BE2009474C1 /* ChineseToPinyin.m */; };
+		AA52D1731CEDC396009474C1 /* NSString+pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52D1721CEDC396009474C1 /* NSString+pinyin.m */; };
 		AA572CC31CBE4228003DEB92 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572CC21CBE4228003DEB92 /* MainTableViewController.m */; };
 		AA572CC61CBE426C003DEB92 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572CC51CBE426C003DEB92 /* MainTabBarController.m */; };
 		AA572CED1CBE4A74003DEB92 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572CCA1CBE4A74003DEB92 /* AFHTTPSessionManager.m */; };
@@ -43,6 +46,7 @@
 		AA572D001CBE4BFE003DEB92 /* MyTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572CFF1CBE4BFE003DEB92 /* MyTabBarBtn.m */; };
 		AA572D031CBE4ED8003DEB92 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D021CBE4ED8003DEB92 /* AViewController.m */; };
 		AA572D061CBE4EE4003DEB92 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D051CBE4EE4003DEB92 /* BViewController.m */; };
+		AA68F7091CEEA95100DF9329 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA68F7081CEEA95100DF9329 /* SearchTableViewController.m */; };
 		AA8380C21CD30BC800FB52A9 /* BTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */; };
 		AA8380C81CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */; };
@@ -92,6 +96,12 @@
 		AA1909FF1CAE8277009B5DD9 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		AA2DB7C71CD9ED7A00BE48F4 /* CViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
 		AA2DB7C81CD9ED7A00BE48F4 /* CViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
+		AA52D16B1CED67C9009474C1 /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
+		AA52D16C1CED67C9009474C1 /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
+		AA52D16E1CED9BE2009474C1 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
+		AA52D16F1CED9BE2009474C1 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
+		AA52D1711CEDC396009474C1 /* NSString+pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+pinyin.h"; sourceTree = "<group>"; };
+		AA52D1721CEDC396009474C1 /* NSString+pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+pinyin.m"; sourceTree = "<group>"; };
 		AA572CC11CBE4228003DEB92 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		AA572CC21CBE4228003DEB92 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		AA572CC41CBE426C003DEB92 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -137,6 +147,8 @@
 		AA572D021CBE4ED8003DEB92 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 		AA572D041CBE4EE4003DEB92 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		AA572D051CBE4EE4003DEB92 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		AA68F7071CEEA95100DF9329 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		AA68F7081CEEA95100DF9329 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		AA8380C01CD30BC800FB52A9 /* BTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTableViewCell.h; sourceTree = "<group>"; };
 		AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTableViewCell.m; sourceTree = "<group>"; };
 		AA8380C41CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
@@ -320,6 +332,10 @@
 		AAC85A721C9FEAA0009AC584 /* git_测试 */ = {
 			isa = PBXGroup;
 			children = (
+				AA52D1711CEDC396009474C1 /* NSString+pinyin.h */,
+				AA52D1721CEDC396009474C1 /* NSString+pinyin.m */,
+				AA52D16E1CED9BE2009474C1 /* ChineseToPinyin.h */,
+				AA52D16F1CED9BE2009474C1 /* ChineseToPinyin.m */,
 				AA16B3E21CDB3D3F00B70BCC /* Cagrory */,
 				AA8380C31CD30C6E00FB52A9 /* SDAutoLayout */,
 				AA572CC71CBE4A73003DEB92 /* AFNetworking */,
@@ -353,6 +369,10 @@
 				AACFC9C91CE06C1600E9850B /* DTableViewCell.h */,
 				AACFC9CA1CE06C1600E9850B /* DTableViewCell.m */,
 				AACFC9CB1CE06C1600E9850B /* DTableViewCell.xib */,
+				AA52D16B1CED67C9009474C1 /* FriendsListViewController.h */,
+				AA52D16C1CED67C9009474C1 /* FriendsListViewController.m */,
+				AA68F7071CEEA95100DF9329 /* SearchTableViewController.h */,
+				AA68F7081CEEA95100DF9329 /* SearchTableViewController.m */,
 				AA1909D31CAE7568009B5DD9 /* model */,
 				AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */,
 				AAC85A7F1C9FEAA0009AC584 /* Assets.xcassets */,
@@ -460,6 +480,7 @@
 				AA572CC31CBE4228003DEB92 /* MainTableViewController.m in Sources */,
 				AA572CFA1CBE4A74003DEB92 /* UIImageView+AFNetworking.m in Sources */,
 				AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */,
+				AA68F7091CEEA95100DF9329 /* SearchTableViewController.m in Sources */,
 				AA572CFC1CBE4A74003DEB92 /* UIRefreshControl+AFNetworking.m in Sources */,
 				AA1909D21CAE6414009B5DD9 /* ViewController.m in Sources */,
 				AA1909E01CAE7FF9009B5DD9 /* SVRadialGradientLayer.m in Sources */,
@@ -469,6 +490,7 @@
 				AA572CED1CBE4A74003DEB92 /* AFHTTPSessionManager.m in Sources */,
 				AA572CF11CBE4A74003DEB92 /* AFURLResponseSerialization.m in Sources */,
 				AACFC9C81CE0662800E9850B /* DViewController.m in Sources */,
+				AA52D16D1CED67C9009474C1 /* FriendsListViewController.m in Sources */,
 				AA16B3E11CDB360300B70BCC /* KJPerSon.m in Sources */,
 				AA16B3F81CDB489900B70BCC /* OrderModel.m in Sources */,
 				AA572CF81CBE4A74003DEB92 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -479,6 +501,7 @@
 				AA572CF71CBE4A74003DEB92 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				AA0667131CE18E09008C7085 /* KJMenuView.m in Sources */,
 				AA16B3E51CDB3D5E00B70BCC /* UIScrollView+VGParallaxHeader.m in Sources */,
+				AA52D1701CED9BE2009474C1 /* ChineseToPinyin.m in Sources */,
 				AACFC9CC1CE06C1600E9850B /* DTableViewCell.m in Sources */,
 				AA572CFB1CBE4A74003DEB92 /* UIProgressView+AFNetworking.m in Sources */,
 				AA572CF41CBE4A74003DEB92 /* README.md in Sources */,
@@ -488,6 +511,7 @@
 				AAFCA7891CBF7B9F00F3F8BE /* ACollectionViewCell.m in Sources */,
 				AA16B3F51CDB431200B70BCC /* CTableViewCell.m in Sources */,
 				AAC85A781C9FEAA0009AC584 /* AppDelegate.m in Sources */,
+				AA52D1731CEDC396009474C1 /* NSString+pinyin.m in Sources */,
 				AA1909DF1CAE7FF9009B5DD9 /* SVProgressHUD.m in Sources */,
 				AAC85A751C9FEAA0009AC584 /* main.m in Sources */,
 				AA572CF01CBE4A74003DEB92 /* AFURLRequestSerialization.m in Sources */,
@@ -611,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "git_测试/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mht.git---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "git_测试/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mht.git---";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -30,15 +30,16 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"筛选" style:UIBarButtonItemStyleDone target:self action:@selector(rightAction:)];
     
 }
+#pragma mark --导航栏按钮--
 - (void)rightAction:(UIBarButtonItem *)sender {
-    
     [self menu];
-    if (_menu.hidden) {
+    if (_menu.MenuHidden) {
         [_menu showView];
     }else {
         [_menu hidView];
     }
 }
+#pragma mark --懒加载--
 - (KJMenuView *)menu {
     NSArray *titleArr = @[@"交易状态:",@"交易类型:"];
     NSArray *text1 = @[@"不限",@"进行中",@"处理成功",@"处理失败"];
@@ -65,14 +66,17 @@
 - (NSMutableArray *)dataSource {
     if (nil == _dataSource) {
         _dataSource = [[NSMutableArray alloc]init];
-        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"华南MSCI中国A股",@"stock",@"2016年4月12日 13:22:03",@"date",@"1",@"transactionType",@"100.00元",@"money",@"预计 04-28日确认",@"confirmDate",@"1",@"transactionStatus",nil];
-//        NSDictionary *dic1 = [NSDictionary dictionaryWithObjectsAndKeys:@"订单确认",@"text",@"预计2016年4月12日订单确认",@"date",@"0",@"type",@"2",@"index",nil];
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"华南MSCI中国A股",@"stock",@"2016年4月12日 13:22:03",@"date",@"3",@"transactionType",@"100.00元",@"money",@"预计 04-28日确认",@"confirmDate",@"2",@"transactionStatus",nil];
+        NSDictionary *dic1 = [NSDictionary dictionaryWithObjectsAndKeys:@"华南MSCI中国A股",@"stock",@"2016年4月12日 13:22:03",@"date",@"2",@"transactionType",@"100.00元",@"money",@"预计 04-28日确认",@"confirmDate",@"1",@"transactionStatus",nil];
 //        NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:@"份额到账",@"text",@"预计2016年4月12日14:30所有基金份额到账",@"date",@"0",@"type",@"3",@"index",nil];
 //        NSDictionary *dic3 = [NSDictionary dictionaryWithObjectsAndKeys:@"(请耐心等待哟,马上就到账了~_~)",@"text",@"",@"date",@"0",@"type",@"4",@"index",nil];
         TransactionRecordsModel *model = [TransactionRecordsModel OrderWithDic:dic];
         TransactionRecordsModel *model1 = [TransactionRecordsModel OrderWithDic:dic];
         TransactionRecordsModel *model2 = [TransactionRecordsModel OrderWithDic:dic];
         TransactionRecordsModel *model3 = [TransactionRecordsModel OrderWithDic:dic];
+        TransactionRecordsModel *model4 = [TransactionRecordsModel OrderWithDic:dic1];
+        TransactionRecordsModel *model5 = [TransactionRecordsModel OrderWithDic:dic1];
+        TransactionRecordsModel *model6 = [TransactionRecordsModel OrderWithDic:dic1];
 //        TransactionRecordsModel *model1 = [OrderModel OrderWithDic:dic1];
 //        TransactionRecordsModel *model2 = [OrderModel OrderWithDic:dic2];
 //        TransactionRecordsModel *model3 = [OrderModel OrderWithDic:dic3];
@@ -80,6 +84,9 @@
         [_dataSource addObject:model1];
         [_dataSource addObject:model2];
         [_dataSource addObject:model3];
+        [_dataSource addObject:model4];
+        [_dataSource addObject:model5];
+        [_dataSource addObject:model6];
 
     }
     return _dataSource;
@@ -122,6 +129,7 @@
 - (void)selectBtn:(NSMutableArray *)SelectRow {
     NSLog(@"selectRow = %@",SelectRow);
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

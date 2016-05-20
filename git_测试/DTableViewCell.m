@@ -31,10 +31,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         UILabel *label = [[UILabel alloc] init];
-        label.font = DefaultFont;
+        label.font = [UIFont systemFontOfSize:10];
         label.layer.masksToBounds = YES;
-        label.layer.cornerRadius = 5;
-        label.layer.borderWidth=1.0f; //边框宽度
+        label.layer.cornerRadius = 2;
+        label.layer.borderWidth=0.5f; //边框宽度
         label.layer.borderColor= [[UIColor blueColor] CGColor];//边框颜色
         label.textColor = [UIColor blueColor];
         _View = label;
@@ -100,7 +100,7 @@
         .topEqualToView(_View3)
         .rightSpaceToView(_View5,5)
         .heightRatioToView(_View3,1)
-        .leftSpaceToView(_View3,0);
+        .leftSpaceToView(_View3,5);
         
         [_View3 setSingleLineAutoResizeWithMaxWidth:150];
         [_View5 setSingleLineAutoResizeWithMaxWidth:60];
@@ -145,7 +145,7 @@
         }
         case success:
         {
-            _View.text = @"确认成功";
+            _View5.text = @"确认成功";
             _View5.textColor = [UIColor greenColor];
             break;
         }

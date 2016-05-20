@@ -156,7 +156,7 @@
         image.image = [UIImage imageNamed:@"交易详情"];
         [cell.contentView addSubview:image];
     }
-    
+    cell.selectionStyle = UITableViewCellAccessoryNone;
     oldModel = model;
     return cell;
 }
