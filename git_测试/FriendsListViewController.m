@@ -12,7 +12,8 @@
 #import "ChineseToPinyin.h"
 #import "NSString+pinyin.h"
 #import "SearchTableViewController.h"
-@interface FriendsListViewController ()<UISearchResultsUpdating,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>{
+#import "MessagingViewController.h"
+@interface FriendsListViewController ()<UISearchResultsUpdating,UISearchControllerDelegate,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray *sectionTitlesArray;  //分区数组
     NSMutableArray *model;              //初始数据源
 }
@@ -41,6 +42,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"通讯录";
+    
     model = [[NSMutableArray alloc] init];
     NSArray *nameArr = [NSArray arrayWithObjects:@"沈海亮",@"沈应好",@"爱军",@"阿姨",@"韩哥",@"韩红",@"哈哈",@"江江",@"莉莉",@"李红",@"无邪",@"钱虹",@"孙海",@"孙俪",@"邓超",@"马超",@"赵超",@"刘备",@"丈夫",@"吴超",@"吴涛",@"55", nil];
     for (int i = 0; i<nameArr.count; i++) {
@@ -146,33 +149,36 @@
         //初始化搜索显示的控制器 --(数据加载于这个控制器的tableview上面)
         _searchVc = [[SearchTableViewController alloc] init];
         _searchController = [[UISearchController alloc] initWithSearchResultsController:_searchVc];
+        _searchController.delegate = self;
         _searchController.searchResultsUpdater = self;
+        [_searchController.searchBar sizeToFit];
         //搜索时，背景变模糊
-        _searchController.obscuresBackgroundDuringPresentation = YES;
-        _searchController.hidesNavigationBarDuringPresentation = YES;
+//        _searchController.obscuresBackgroundDuringPresentation = YES;
+//        _searchController.hidesNavigationBarDuringPresentation = YES;
         _searchController.searchBar.placeholder =  @"快速搜索";
-        _searchController.searchBar.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.95];
+//        _searchController.searchBar.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.95];
         
-        UISearchBar *bar = self.searchController.searchBar;
-        bar.barStyle = UIBarStyleDefault;
-        bar.translucent = YES;
-        bar.barTintColor = Global_mainBackgroundColor;
-        bar.tintColor = Global_tintColor;
-        UIImageView *view = [[[bar.subviews objectAtIndex:0] subviews] firstObject];
-        view.layer.borderColor = Global_mainBackgroundColor.CGColor;
-        view.layer.borderWidth = 1;
         
-        bar.layer.borderColor = [UIColor redColor].CGColor;
-        
-//        bar.showsBookmarkButton = YES;
-        [bar setImage:[UIImage imageNamed:@"VoiceSearchStartBtn"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
-        bar.delegate = self;
-        CGRect rect = bar.frame;
-        rect.size.height = 44;
-        bar.frame = rect;
+//        UISearchBar *bar = self.searchController.searchBar;
+//        bar.barStyle = UIBarStyleDefault;
+//        bar.translucent = YES;
+//        bar.barTintColor = Global_mainBackgroundColor;
+//        bar.tintColor = Global_tintColor;
+//        UIImageView *view = [[[bar.subviews objectAtIndex:0] subviews] firstObject];
+//        view.layer.borderColor = Global_mainBackgroundColor.CGColor;
+//        view.layer.borderWidth = 1;
+//        
+//        bar.layer.borderColor = [UIColor redColor].CGColor;
+//        
+////        bar.showsBookmarkButton = YES;
+//        [bar setImage:[UIImage imageNamed:@"VoiceSearchStartBtn"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
+//        bar.delegate = self;
+//        CGRect rect = bar.frame;
+//        rect.size.height = 44;
+//        bar.frame = rect;
         
 //        self.tableView.tableHeaderView = self.searchController.searchBar;
-        self.tableView.tableHeaderView = bar;
+        self.tableView.tableHeaderView = _searchController.searchBar;
 //        self.tableView.rowHeight = [SDContactsTableViewCell fixedHeight];
         self.tableView.sectionIndexColor = [UIColor lightGrayColor];
         self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
@@ -262,6 +268,13 @@
     NSMutableDictionary *dic = _dataSource[indexPath.section][indexPath.row];
     cell.textLabel.text = dic[@"nameKey"];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSMutableDictionary *dic = _dataSource[indexPath.section][indexPath.row];
+    MessagingViewController *messagingVC = [[MessagingViewController alloc] init];
+    messagingVC.hidesBottomBarWhenPushed = YES;
+    messagingVC.USerName = dic[@"nameKey"];
+    [self.navigationController pushViewController:messagingVC animated:YES];
 }
 //添加section标题
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
