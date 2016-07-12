@@ -55,6 +55,7 @@
 		AA8380C81CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */; };
 		AAB338D61D34D2E200C2B392 /* 猫猫和狗.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */; };
+		AAB338D81D34D3D900C2B392 /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = AAB338D71D34D3D900C2B392 /* head.png */; };
 		AAC85A751C9FEAA0009AC584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A741C9FEAA0009AC584 /* main.m */; };
 		AAC85A781C9FEAA0009AC584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A771C9FEAA0009AC584 /* AppDelegate.m */; };
 		AAC85A7E1C9FEAA0009AC584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */; };
@@ -170,6 +171,7 @@
 		AA8380C61CD30C6E00FB52A9 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猫猫和狗.jpg"; sourceTree = "<group>"; };
+		AAB338D71D34D3D900C2B392 /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		AAC85A701C9FEAA0009AC584 /* git_测试.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git_测试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC85A741C9FEAA0009AC584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAC85A761C9FEAA0009AC584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		AAC85A721C9FEAA0009AC584 /* git_测试 */ = {
 			isa = PBXGroup;
 			children = (
+				AAB338D71D34D3D900C2B392 /* head.png */,
 				AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */,
 				AA52D1711CEDC396009474C1 /* NSString+pinyin.h */,
 				AA52D1721CEDC396009474C1 /* NSString+pinyin.m */,
@@ -490,6 +493,7 @@
 			files = (
 				AAB338D61D34D2E200C2B392 /* 猫猫和狗.jpg in Resources */,
 				AACFC9CD1CE06C1600E9850B /* DTableViewCell.xib in Resources */,
+				AAB338D81D34D3D900C2B392 /* head.png in Resources */,
 				AAC85A831C9FEAA0009AC584 /* LaunchScreen.storyboard in Resources */,
 				AAC85A801C9FEAA0009AC584 /* Assets.xcassets in Resources */,
 				AAC85A7E1C9FEAA0009AC584 /* Main.storyboard in Resources */,
