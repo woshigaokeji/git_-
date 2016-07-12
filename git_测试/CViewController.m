@@ -10,6 +10,7 @@
 #import "UIScrollView+VGParallaxHeader.h"
 #import "OrderModel.h"
 #import "CTableViewCell.h"
+#import "SliderViewController.h"
 @interface CViewController ()<UITableViewDelegate,UITableViewDataSource> {
     OrderModel *oldModel;
 }
@@ -163,6 +164,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     OrderModel *model = _dataSource[indexPath.row];
     return model.cellHeight;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SliderViewController *sliderVc = [[SliderViewController alloc] init];
+    sliderVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:sliderVc animated:YES];
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

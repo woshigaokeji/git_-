@@ -50,9 +50,11 @@
 		AA572D031CBE4ED8003DEB92 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D021CBE4ED8003DEB92 /* AViewController.m */; };
 		AA572D061CBE4EE4003DEB92 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA572D051CBE4EE4003DEB92 /* BViewController.m */; };
 		AA68F7091CEEA95100DF9329 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA68F7081CEEA95100DF9329 /* SearchTableViewController.m */; };
+		AA72B4281D06D75D00DDD5E8 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA72B4271D06D75D00DDD5E8 /* SliderViewController.m */; };
 		AA8380C21CD30BC800FB52A9 /* BTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */; };
 		AA8380C81CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		AA8380C91CD30C6E00FB52A9 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */; };
+		AAB338D61D34D2E200C2B392 /* 猫猫和狗.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */; };
 		AAC85A751C9FEAA0009AC584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A741C9FEAA0009AC584 /* main.m */; };
 		AAC85A781C9FEAA0009AC584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC85A771C9FEAA0009AC584 /* AppDelegate.m */; };
 		AAC85A7E1C9FEAA0009AC584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC85A7C1C9FEAA0009AC584 /* Main.storyboard */; };
@@ -159,12 +161,15 @@
 		AA572D051CBE4EE4003DEB92 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		AA68F7071CEEA95100DF9329 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		AA68F7081CEEA95100DF9329 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		AA72B4261D06D75D00DDD5E8 /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		AA72B4271D06D75D00DDD5E8 /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
 		AA8380C01CD30BC800FB52A9 /* BTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTableViewCell.h; sourceTree = "<group>"; };
 		AA8380C11CD30BC800FB52A9 /* BTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTableViewCell.m; sourceTree = "<group>"; };
 		AA8380C41CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		AA8380C51CD30C6E00FB52A9 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		AA8380C61CD30C6E00FB52A9 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		AA8380C71CD30C6E00FB52A9 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猫猫和狗.jpg"; sourceTree = "<group>"; };
 		AAC85A701C9FEAA0009AC584 /* git_测试.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git_测试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC85A741C9FEAA0009AC584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAC85A761C9FEAA0009AC584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -348,6 +353,7 @@
 		AAC85A721C9FEAA0009AC584 /* git_测试 */ = {
 			isa = PBXGroup;
 			children = (
+				AAB338D51D34D2E200C2B392 /* 猫猫和狗.jpg */,
 				AA52D1711CEDC396009474C1 /* NSString+pinyin.h */,
 				AA52D1721CEDC396009474C1 /* NSString+pinyin.m */,
 				AA52D16E1CED9BE2009474C1 /* ChineseToPinyin.h */,
@@ -380,6 +386,8 @@
 				AA2DB7C81CD9ED7A00BE48F4 /* CViewController.m */,
 				AA16B3F31CDB431200B70BCC /* CTableViewCell.h */,
 				AA16B3F41CDB431200B70BCC /* CTableViewCell.m */,
+				AA72B4261D06D75D00DDD5E8 /* SliderViewController.h */,
+				AA72B4271D06D75D00DDD5E8 /* SliderViewController.m */,
 				AACFC9C61CE0662800E9850B /* DViewController.h */,
 				AACFC9C71CE0662800E9850B /* DViewController.m */,
 				AACFC9C91CE06C1600E9850B /* DTableViewCell.h */,
@@ -480,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB338D61D34D2E200C2B392 /* 猫猫和狗.jpg in Resources */,
 				AACFC9CD1CE06C1600E9850B /* DTableViewCell.xib in Resources */,
 				AAC85A831C9FEAA0009AC584 /* LaunchScreen.storyboard in Resources */,
 				AAC85A801C9FEAA0009AC584 /* Assets.xcassets in Resources */,
@@ -514,6 +523,7 @@
 				AA52D16D1CED67C9009474C1 /* FriendsListViewController.m in Sources */,
 				AA16B3E11CDB360300B70BCC /* KJPerSon.m in Sources */,
 				AA16B3F81CDB489900B70BCC /* OrderModel.m in Sources */,
+				AA72B4281D06D75D00DDD5E8 /* SliderViewController.m in Sources */,
 				AA572CF81CBE4A74003DEB92 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				AA16B3F21CDB3F2200B70BCC /* NSLayoutConstraint+PureLayout.m in Sources */,
 				AACFC9D01CE0768B00E9850B /* TransactionRecordsModel.m in Sources */,

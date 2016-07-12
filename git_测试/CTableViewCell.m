@@ -114,7 +114,6 @@
                 break;
             }
                 
-                
             default:
                 break;
         }
@@ -123,7 +122,6 @@
         
         _lastLineView.frame = CGRectMake(CGRectGetMinX(_lineView.frame), CGRectGetMaxY(_lineView.frame) + 5, 1, CGRectGetHeight(_text.frame) + CGRectGetHeight(_datelabel.frame));
     }
-
     //保存当前cell的高度
     model.cellHeight = CGRectGetMaxY(_datelabel.frame);
     //保存当前lastLineView,方便下一个步骤状态设置颜色

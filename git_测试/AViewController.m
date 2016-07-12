@@ -25,6 +25,11 @@
 @implementation AViewController
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bigShadow"] forBarMetrics:UIBarMetricsDefault];
+    //
+    //    //去掉透明后导航栏下边的黑边
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"bigShadow"]];
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +38,9 @@
     [self ScrollView];
     [self collectionView];
     [self seta:10 b:13];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(RightAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"啦啦啦" style:UIBarButtonItemStyleDone target:self action:@selector(RightAction:)];
     
 }
 - (void)seta:(int)a b:(int)b {

@@ -43,12 +43,13 @@
 
 - (void)setModel:(MessagingModel *)model {
     _model = model;
-    _time.frame = CGRectMake(CGRectGetWidth(self.frame)/2 - 60, 5, 120, 10);
+    CGRect rect = [UIScreen mainScreen].bounds;
+    _time.frame = CGRectMake(CGRectGetWidth(rect)/2 - 60, 5, 120, 10);
     _time.text = model.time;
     _time.textAlignment = NSTextAlignmentCenter;
-    _text.frame = CGRectMake(40, CGRectGetMaxY(_time.frame) + 5, CGRectGetWidth(self.frame)-80, 40);
+    _text.frame = CGRectMake(40, CGRectGetMaxY(_time.frame) + 5, CGRectGetWidth(rect)-80, 40);
     CGSize size = [model.text boundingRectWithSize:CGSizeMake(CGRectGetWidth(_text.frame), 1000.0) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
-    _text.frame = CGRectMake(40, CGRectGetMaxY(_time.frame) + 5, CGRectGetWidth(self.frame)-80, size.height);
+    _text.frame = CGRectMake(40, CGRectGetMaxY(_time.frame) + 5, CGRectGetWidth(rect)-80, size.height);
     
     if (model.textType == textTyep) {
         //纯文本
@@ -69,7 +70,7 @@
         //图片
         if (model.messagingType == UserType) {
             //我发的消息
-            _textImage.frame = CGRectMake(CGRectGetWidth(self.frame) - 120, CGRectGetMaxY(_time.frame) + 5, 80, 80);
+            _textImage.frame = CGRectMake(CGRectGetWidth(rect) - 120, CGRectGetMaxY(_time.frame) + 5, 80, 80);
         }else {
             //别人发的消息
            _textImage.frame = CGRectMake(40, CGRectGetMaxY(_time.frame) + 5, 80, 80);
@@ -79,7 +80,7 @@
     }
     if (model.messagingType == UserType) {
         //我发的消息
-        _headImage.frame = CGRectMake(CGRectGetWidth(self.frame) - 40, CGRectGetMaxY(_time.frame) + 5, 30, 30);
+        _headImage.frame = CGRectMake(CGRectGetWidth(rect) - 40, CGRectGetMaxY(_time.frame) + 5, 30, 30);
         
     }else {
         //别人发的消息
